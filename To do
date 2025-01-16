@@ -37,3 +37,17 @@ xhost +SI:localuser:zeroshin
 
 /etc/X11/xinit/xinitrc
 xrandr --output HDMI-1 --rotate right
+
+
+
+Chromium flags
+--kiosk
+--noerrdialogs
+--disable-infobars
+--enable-features=WebUIDarkMode 
+--force-dark-mode
+--no-memcheck
+
+
+FULLPAGEOS
+sudo nano /scripts/start_gui
