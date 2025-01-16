@@ -1,0 +1,39 @@
+For Bookworm / rpi3 A+
+/boot/firmware/config.txt
+
+arm_freq=1450
+over_voltage=6
+temp_limit=80
+temp_soft_limit=70
+avoid_pwm_pll=1
+core_freq=450
+v3d_freq=400
+sdram_freq=550
+sdram_schmoo=0x02000020
+sdram_over_voltage=6
+#gpu_freq=500
+#gpu_mem=256
+
+
+
+/etc/X11/xorg.conf.d
+
+Section "OutputClass"
+  Identifier "vc4"
+  MatchDriver "vc4"
+  Driver "modesetting"
+  Option "PrimaryGPU" "true"
+EndSection
+
+
+
+sudo nano .xprofile
+xhost +SI:localuser:zeroshin
+
+
+
+/etc/X11/xinit/xinitrc
+
+xrandr --output HDMI-1 --rotate right
+
+
