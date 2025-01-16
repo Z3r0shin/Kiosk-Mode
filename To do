@@ -1,6 +1,6 @@
 For Bookworm / rpi3 A+
-/boot/firmware/config.txt
 
+/boot/firmware/config.txt
 arm_freq=1450
 over_voltage=6
 temp_limit=80
@@ -17,7 +17,6 @@ sdram_over_voltage=6
 
 
 /etc/X11/xorg.conf.d
-
 Section "OutputClass"
   Identifier "vc4"
   MatchDriver "vc4"
@@ -31,9 +30,10 @@ sudo nano .xprofile
 xhost +SI:localuser:zeroshin
 
 
+/etc/xdg/lxsession/LXDE-pi/autostart
+@xrandr --output HDMI-1 --rotate right
+
+
 
 /etc/X11/xinit/xinitrc
-
 xrandr --output HDMI-1 --rotate right
-
-
